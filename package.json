@@ -57,5 +57,13 @@
     "core-js": "^3.4.1",
     "regenerator-runtime": "^0.13.3",
     "vue": "^2.6.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiang/vue-graphql-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shiang/vue-graphql-example/issues"
+  },
+  "homepage": "https://github.com/shiang/vue-graphql-example#readme"
 }
