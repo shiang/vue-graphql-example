@@ -6,10 +6,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 
 const httpLink = new HttpLink({
   // You should use an absolute URL here
-  uri: 'https://my-gql.herokuapp.com/v1/graphql',
-  headers: {
-    'x-hasura-admin-secret': 'Thisis!Password'
-  }
+  uri: 'https://countries.trevorblades.com/'
 })
 
 // Create the apollo client
