@@ -7,9 +7,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:vue/essential',
-    'prettier/vue',
-    'plugin:vue/recommended',
-    'plugin:prettier/recommended'
+    'plugin:vue/recommended'
   ],
   globals: {
     Atomics: 'readonly',
@@ -29,6 +27,7 @@ module.exports = {
     'no-console': ['off'],
     quotes: ['error', 'single'],
     'jsx-quotes': ['error', 'prefer-single'],
-    camelcase: ['off']
+    camelcase: ['off'],
+    'vue/html-closing-bracket-newline': 'off'
   }
 }
