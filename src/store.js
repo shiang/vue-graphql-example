@@ -28,11 +28,6 @@ const actions = {
           return res.data.continents
         }
       })
-      .catch(err => {
-        if (err) {
-          console.error(err)
-        }
-      })
   }
 }
 
