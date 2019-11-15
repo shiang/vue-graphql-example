@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div v-if="$apollo.loading">
-      Loading...
-    </div>
     <div v-if="continents">
       <pre>{{ JSON.stringify(continents, null, 2) }}</pre>
       <div v-for="continent in continents" :key="continent.code">
@@ -28,31 +25,19 @@
         </div>
       </div>
     </div>
-    <button type="button" @click="fetchContinents">
+    <!-- <button type="button" @click="fetchContinents">
       Fetch Continents
-    </button>
+    </button> -->
   </div>
 </template>
 
 <script>
-import { QUERY_CONTINENTS } from '../graphql/queries'
-
 export default {
   name: 'Continents',
-  data() {
-    return {
-      continents: null
-    }
-  },
-  apollo: {
-    continents: QUERY_CONTINENTS
-  },
-  methods: {
-    fetchContinents: async function() {
-      const { data, loading } = await this.$apollo.queries.continents.refetch()
-      if (data && !loading) {
-        this.continents = [data.continents[0]]
-      }
+  props: {
+    continents: {
+      type: Array,
+      required: true
     }
   }
 }

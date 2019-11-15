@@ -1,17 +1,18 @@
 <template>
   <div>
-    <h1>Hello from Vue</h1>
-    <Continents />
+    <Nav />
+    <router-view />
   </div>
 </template>
 
 <script>
 import Continents from './components/Continents'
+import Nav from './components/Nav'
 
 export default {
   name: 'App',
   components: {
-    Continents
+    Nav
   }
 }
 </script>
@@ -19,6 +20,8 @@ export default {
 <style>
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: blueviolet;
+  color: bisque;
 }
 h1 {
   text-align: center;
